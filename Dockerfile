@@ -3,6 +3,8 @@ LABEL maintainer="rajrajendraray@gmail.com"
 
 USER root
 
+RUN apt-get update -y
+
 ARG JAVA_OPTS
 ENV JAVA_OPTS "-Djenkins.install.runSetupWizard=false ${JAVA_OPTS:-}"
 
