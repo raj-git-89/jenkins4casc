@@ -19,4 +19,6 @@ COPY extraPlugins.txt /usr/share/jenkins/ref/extraPlugins.txt
 
 RUN xargs /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/extraPlugins.txt
 
+COPY ./casc_configs/* /var/jenkins_conf/
+
 USER jenkins
